@@ -13,8 +13,8 @@ import java.util.List;
 @Entity(name = "bms_user")
 public class User extends BaseClass{
 
-    private String username;
     private String email;
+    private String password;
     @OneToMany(mappedBy = "User")
     private List<Booking> bookings;
 }
