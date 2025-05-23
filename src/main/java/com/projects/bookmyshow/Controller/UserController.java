@@ -1,5 +1,6 @@
 package com.projects.bookmyshow.Controller;
 
+import com.projects.bookmyshow.DTOs.SignUpRequestDTO;
 import com.projects.bookmyshow.DTOs.SignupResponseDTO;
 import com.projects.bookmyshow.Service.UserService;
 import com.projects.bookmyshow.models.ResponseStatus;
@@ -16,7 +17,7 @@ public class UserController {
 
     public SignupResponseDTO signUp(SignUpRequestDTO signUpRequestDTO) {
         try{
-            User user = userService.signUpUser(signUpRequestDTO.getEmail(),signUpRequestDTO.getPassword());
+            User user = userService.signUpUser(signUpRequestDTO.getEmail(),signUpRequestDTO.getPasswd());
             signUpResponseDTO.setResponseStatus(ResponseStatus.SUCCESS);
             signUpResponseDTO.setMessage("User registered successfully");
 
